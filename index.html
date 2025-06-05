@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surabhi Asthana - LIC Advisor & Financial Consultant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#F1F5F9'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-primary {
+            background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+        }
+        .shadow-professional {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .transition-smooth {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">SA</span>
+                    </div>
+                    <div class="hidden sm:block">
+                        <h1 class="text-xl font-bold text-gray-900">Surabhi Asthana</h1>
+                        <p class="text-xs text-gray-500">LIC Advisor</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#home" class="text-blue-600 hover:text-blue-700 font-medium">Home</a>
+                    <a href="#services" class="text-gray-600 hover:text-blue-600 font-medium">Services</a>
+                    <a href="#achievements" class="text-gray-600 hover:text-blue-600 font-medium">Achievements</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium">Contact</a>
+                </div>
+
+                <!-- Call Button -->
+                <div class="flex items-center space-x-3">
+                    <button onclick="window.open('tel:7785862467', '_self')" 
+                            class="hidden sm:flex items-center px-4 py-2 border border-blue-600 text-blue-600 hover:bg-blue-50 rounded-lg font-medium">
+                        📞 Call Now
+                    </button>
+                    <button id="mobileMenuBtn" class="md:hidden p-2 text-gray-600">
+                        ☰
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-gray-200">
+        <div class="px-4 py-2 space-y-2">
+            <a href="#home" class="block py-2 text-gray-600 hover:text-blue-600">Home</a>
+            <a href="#services" class="block py-2 text-gray-600 hover:text-blue-600">Services</a>
+            <a href="#achievements" class="block py-2 text-gray-600 hover:text-blue-600">Achievements</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
+            <button onclick="window.open('tel:7785862467', '_self')" 
+                    class="w-full text-left py-2 text-blue-600 font-medium">📞 Call: 7785862467</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative px-4 py-20 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <div class="mb-8">
+                    <div class="w-32 h-32 mx-auto mb-6 gradient-primary rounded-full flex items-center justify-center shadow-2xl">
+                        <span class="text-4xl font-bold text-white">SA</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+                        Surabhi Asthana
+                    </h1>
+                    <p class="text-xl text-blue-600 font-semibold mb-2">
+                        LIC Advisor & Financial Consultant
+                    </p>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Your trusted partner for life insurance, investment planning, and financial security. 
+                        Building wealth and protecting families for over 5 years.
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                    <button onclick="showContactForm()" 
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg rounded-lg font-semibold transition-smooth">
+                        Get Started Today
+                    </button>
+                    <button onclick="window.open('tel:7785862467', '_self')" 
+                            class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg rounded-lg font-semibold transition-smooth flex items-center">
+                        📞 Call Now: 7785862467
+                    </button>
+                </div>
+
+                <!-- Quick Contact -->
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 max-w-lg mx-auto shadow-xl border border-white/20">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Get Instant Consultation</h3>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button onclick="window.open('tel:7785862467', '_self')" 
+                                class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg flex-1 transition-smooth">
+                            📞 Call
+                        </button>
+                        <button onclick="window.open('https://wa.me/917785862467', '_blank')" 
+                                class="border border-green-600 text-green-600 hover:bg-green-50 px-4 py-2 rounded-lg flex-1 transition-smooth">
+                            WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Achievements & Credentials</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Recognized excellence in financial advisory and customer service
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white border-l-4 border-l-blue-600 p-6 rounded-lg shadow-sm hover:shadow-lg transition-smooth">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                            🏆
+                        </div>
+                        <p class="font-semibold text-gray-900">LIC Top Advisor 2023</p>
+                    </div>
+                </div>
+                <div class="bg-white border-l-4 border-l-blue-600 p-6 rounded-lg shadow-sm hover:shadow-lg transition-smooth">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                            ⭐
+                        </div>
+                        <p class="font-semibold text-gray-900">5+ Years Experience</p>
+                    </div>
+                </div>
+                <div class="bg-white border-l-4 border-l-blue-600 p-6 rounded-lg shadow-sm hover:shadow-lg transition-smooth">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                            👥
+                        </div>
+                        <p class="font-semibold text-gray-900">500+ Happy Clients</p>
+                    </div>
+                </div>
+                <div class="bg-white border-l-4 border-l-blue-600 p-6 rounded-lg shadow-sm hover:shadow-lg transition-smooth">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                            📜
+                        </div>
+                        <p class="font-semibold text-gray-900">Certified Financial Planner</p>
+                    </div>
+                </div>
+                <div class="bg-white border-l-4 border-l-blue-600 p-6 rounded-lg shadow-sm hover:shadow-lg transition-smooth">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                            🥇
+                        </div>
+                        <p class="font-semibold text-gray-900">Excellence Award 2022</p>
+                    </div>
+                </div>
+                <div class="bg-white border-l-4 border-l-blue-600 p-6 rounded-lg shadow-sm hover:shadow-lg transition-smooth">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                            💼
+                        </div>
+                        <p class="font-semibold text-gray-900">Customer Service Excellence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Comprehensive financial solutions tailored to your needs
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl text-center hover:shadow-xl transition-smooth border-0 shadow-lg">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                        🛡️
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Life Insurance</h3>
+                    <p class="text-gray-600 text-base">
+                        Comprehensive life insurance plans to secure your family's future
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl text-center hover:shadow-xl transition-smooth border-0 shadow-lg">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                        📈
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Investment Plans</h3>
+                    <p class="text-gray-600 text-base">
+                        Smart investment solutions for wealth creation and financial growth
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl text-center hover:shadow-xl transition-smooth border-0 shadow-lg">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                        🏦
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Pension Plans</h3>
+                    <p class="text-gray-600 text-base">
+                        Retirement planning with guaranteed returns and peace of mind
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Why Choose Surabhi Asthana?</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-green-600 text-xl">✓</span>
+                            <span class="text-gray-700">Personalized financial planning approach</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-green-600 text-xl">✓</span>
+                            <span class="text-gray-700">5+ years of proven experience</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-green-600 text-xl">✓</span>
+                            <span class="text-gray-700">500+ satisfied clients</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-green-600 text-xl">✓</span>
+                            <span class="text-gray-700">24/7 customer support</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-green-600 text-xl">✓</span>
+                            <span class="text-gray-700">Best-in-class LIC products</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-green-600 text-xl">✓</span>
+                            <span class="text-gray-700">Free consultation and policy review</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gradient-primary rounded-2xl p-8 text-white">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">⭐</div>
+                        <h3 class="text-2xl font-bold mb-4">Get Your Free Consultation</h3>
+                        <p class="mb-6 text-blue-100">
+                            Schedule a personalized consultation to discuss your financial goals and find the perfect insurance solution.
+                        </p>
+                        <button onclick="showContactForm()" 
+                                class="bg-white text-blue-600 hover:bg-gray-100 w-full py-3 text-lg font-semibold rounded-lg transition-smooth">
+                            Book Consultation
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Ready to secure your future? Contact us today for expert guidance
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Contact Form -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                            💬 Send a Message
+                        </h3>
+                        <form id="contactForm" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                                    <input type="text" id="name" required 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                           placeholder="Enter your full name">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                                    <input type="email" id="email" required 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                           placeholder="Enter your email">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                    <input type="tel" id="phone" 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                           placeholder="Enter your phone number">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Subject *</label>
+                                    <input type="text" id="subject" required 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                           placeholder="What's this about?">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                                <textarea id="message" required rows="4" 
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                          placeholder="Please describe your inquiry or how we can help you..."></textarea>
+                            </div>
+                            <button type="submit" 
+                                    class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-smooth">
+                                📤 Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-6">
+                    <!-- Advisor Info -->
+                    <div class="bg-white rounded-2xl shadow-lg p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Surabhi Asthana</h3>
+                        <p class="text-gray-600 text-sm mb-6">LIC Advisor & Financial Consultant</p>
+                        
+                        <div class="text-center mb-6">
+                            <div class="w-20 h-20 mx-auto mb-4 gradient-primary rounded-full flex items-center justify-center">
+                                <span class="text-2xl font-bold text-white">SA</span>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                Professional LIC Advisor with 5+ years of experience
+                            </p>
+                        </div>
+
+                        <div class="space-y-3">
+                            <button onclick="window.open('tel:7785862467', '_self')" 
+                                    class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-semibold transition-smooth">
+                                📞 Call: 7785862467
+                            </button>
+                            <button onclick="window.open('https://wa.me/917785862467', '_blank')" 
+                                    class="w-full border border-green-600 text-green-600 hover:bg-green-50 py-3 px-4 rounded-lg font-semibold transition-smooth">
+                                WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Contact Details -->
+                    <div class="bg-white rounded-2xl shadow-lg p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Contact Information</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    📞
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Phone</h4>
+                                    <p class="text-gray-600">7785862467</p>
+                                    <p class="text-sm text-gray-500">Available Mon-Sat, 9 AM - 7 PM</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    📧
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Email</h4>
+                                    <p class="text-gray-600">surabhi.asthana@lic.com</p>
+                                    <p class="text-sm text-gray-500">Response within 24 hours</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    🏢
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Office</h4>
+                                    <p class="text-gray-600">LIC Branch Office</p>
+                                    <p class="text-sm text-gray-500">Visit by appointment</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    🕒
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Business Hours</h4>
+                                    <p class="text-gray-600">Mon - Fri: 9:00 AM - 7:00 PM</p>
+                                    <p class="text-gray-600">Saturday: 10:00 AM - 5:00 PM</p>
+                                    <p class="text-sm text-gray-500">Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Services -->
+                    <div class="gradient-primary rounded-2xl p-6 text-white">
+                        <h3 class="font-semibold mb-4">Our Services</h3>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                                <span>Life Insurance Plans</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                                <span>Investment & Savings</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                                <span>Pension Plans</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                                <span>Health Insurance</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                                <span>Financial Planning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 bg-blue-600">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">
+                Start Your Financial Journey Today
+            </h2>
+            <p class="text-blue-100 mb-8 text-lg">
+                Join hundreds of satisfied clients who trust Surabhi Asthana for their financial security
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="showContactForm()" 
+                        class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg rounded-lg font-semibold transition-smooth">
+                    Register Now
+                </button>
+                <button onclick="window.open('tel:7785862467', '_self')" 
+                        class="border border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg rounded-lg font-semibold transition-smooth">
+                    📞 Quick Call
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Modal -->
+    <div id="contactModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-gray-900">Contact Form Submitted</h3>
+                <button onclick="hideContactForm()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl mb-4">✅</div>
+                <p class="text-gray-600 mb-4">
+                    Thank you for your interest! We'll contact you soon at the provided details.
+                </p>
+                <p class="text-sm text-gray-500 mb-6">
+                    For immediate assistance, please call: <strong>7785862467</strong>
+                </p>
+                <button onclick="hideContactForm()" 
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Hide mobile menu after clicking
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Validate required fields
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Show success modal
+            showContactForm();
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Modal functions
+        function showContactForm() {
+            document.getElementById('contactModal').classList.remove('hidden');
+        }
+
+        function hideContactForm() {
+            document.getElementById('contactModal').classList.add('hidden');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('contactModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                hideContactForm();
+            }
+        });
+
+        // Add loading animation on page load
+        window.addEventListener('load', function() {
+            document.body.classList.add('animate-fade-in');
+        });
+
+        // Add hover effects to cards
+        document.querySelectorAll('.hover\\:shadow-lg, .hover\\:shadow-xl').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
